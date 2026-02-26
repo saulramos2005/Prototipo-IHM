@@ -12,7 +12,7 @@ import {
   Settings,
   LogIn,
 } from "lucide-react";
-import { navigation, contactInfo } from "../data/constants";
+import { navigation } from "../data/constants";
 import { useAuth } from "../contexts/AuthContext";
 import {
   DropdownMenu,
@@ -22,7 +22,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
-import { toast } from "sonner@2.0.3";
+import { toast } from "sonner";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,13 +42,7 @@ export function Header() {
 
   // Filter navigation based on admin status
   const visibleNavigation = navigation.filter((item) => {
-    if (
-      item.href === "/inventario" ||
-      item.href === "/clientes"
-    ) {
-      return isAdmin;
-    }
-    return true;
+    return item.rol?.includes(user?.role!);
   });
 
   return (
@@ -97,7 +91,7 @@ export function Header() {
                       size="icon"
                       className="rounded-full"
                     >
-                      <User className="h-5 w-5" />
+                      <User />
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent
@@ -114,7 +108,7 @@ export function Header() {
                         </p>
                         {isAdmin && (
                           <span className="text-xs bg-primary text-primary-foreground px-2 py-0.5 rounded-full w-fit">
-                            Admin
+                            Vendedor
                           </span>
                         )}
                       </div>

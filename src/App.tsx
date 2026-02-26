@@ -13,7 +13,6 @@ import { AsistenteIA } from "./pages/AsistenteIAPage";
 import { Inventario } from "./pages/InventarioPage";
 import { ClientesPage } from "./pages/ClientesPage";
 import { LoginPage } from "./pages/LoginPage";
-import  SigninForm  from "./pages/Login2";
 
 export default function App() {
   return (
@@ -29,7 +28,7 @@ export default function App() {
               <Route path="/nosotros" element={<AboutPage />} />
               <Route path="/contacto" element={<ContactPage />} />
               <Route path="/asistente" element={<AsistenteIA/>} />
-              <Route path="/login" element={<SigninForm />} />
+              <Route path="/login" element={<LoginPage />} />
               <Route 
                 path="/inventario" 
                 element={
@@ -49,7 +48,7 @@ export default function App() {
             </Routes>
           </main>
           <Footer />
-          <Toaster />
+          <Toaster richColors />
         </div>
       </AuthProvider>
     </Router>

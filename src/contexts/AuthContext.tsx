@@ -4,8 +4,9 @@ interface User {
   id: string;
   name: string;
   email: string;
-  role: 'admin' | 'user';
+  role: Rol;
 }
+export type Rol = 'vendedor' | 'cliente';
 
 interface AuthContextType {
   user: User | null;
@@ -22,8 +23,8 @@ const MOCK_USERS = [
     id: '1',
     email: 'admin@newtop.com',
     password: 'admin123',
-    name: 'Administrador',
-    role: 'admin' as const
+    name: 'Vendedor',
+    role: 'vendedor' as Rol,
   },
 ];
 
@@ -66,7 +67,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     localStorage.removeItem('user');
   };
 
-  const isAdmin = user?.role === 'admin';
+  const isAdmin = user?.role === 'vendedor';
 
   return (
     <AuthContext.Provider value={{ user, login, logout, isAdmin }}>

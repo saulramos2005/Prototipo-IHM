@@ -5,10 +5,12 @@ import { Input } from './ui/input';
 import { Label } from './ui/label';
 import { Textarea } from './ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
+import { InventoryItem } from '../pages/InventarioPage';
+
 
 interface Product {
-  id?: string;
+  id: string | number | undefined;
   name: string;
   type: string;
   price: number;
@@ -31,8 +33,9 @@ interface ProductFormModalProps {
 export function ProductFormModal({ open, onOpenChange, product, onSave, mode }: ProductFormModalProps) {
   const [formData, setFormData] = useState<Product>(
     product || {
+      id: undefined,
       name: '',
-      type: 'Mármol',
+      type: 'Marmol',
       price: 0,
       image: '',
       stock: 0,
@@ -96,16 +99,16 @@ export function ProductFormModal({ open, onOpenChange, product, onSave, mode }: 
             {/* Tipo */}
             <div className="space-y-2">
               <Label htmlFor="type">Tipo de Material *</Label>
-              <Select value={formData.type} onValueChange={(value) => handleChange('type', value)}>
+              <Select value={formData.type} onValueChange={(value: string) => handleChange('type', value)}>
                 <SelectTrigger>
                   <SelectValue placeholder="Seleccionar tipo" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="Mármol">Mármol</SelectItem>
+                  <SelectItem value="Marmol">Marmol</SelectItem>
                   <SelectItem value="Granito">Granito</SelectItem>
                   <SelectItem value="Cuarzo">Cuarzo</SelectItem>
                   <SelectItem value="Travertino">Travertino</SelectItem>
-                  <SelectItem value="Ónix">Ónix</SelectItem>
+                  <SelectItem value="Onix">Onix</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -155,7 +158,7 @@ export function ProductFormModal({ open, onOpenChange, product, onSave, mode }: 
             {/* Ubicación */}
             <div className="space-y-2">
               <Label htmlFor="location">Ubicación</Label>
-              <Select value={formData.location} onValueChange={(value) => handleChange('location', value)}>
+              <Select value={formData.location} onValueChange={(value: string) => handleChange('location', value)}>
                 <SelectTrigger>
                   <SelectValue placeholder="Seleccionar ubicación" />
                 </SelectTrigger>

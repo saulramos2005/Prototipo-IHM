@@ -1,5 +1,5 @@
 export interface Product {
-  id: number
+  id: string | number
   name: string
   type: string
   price: number
@@ -14,11 +14,11 @@ export interface Product {
 export const products: Product[] = [
   {
     id: 1,
-    name: "Mármol Carrara Blanco",
-    type: "Mármol Premium",
+    name: "Marmol Carrara Blanco",
+    type: "Marmol Premium",
     price: 120,
     image: "https://images.unsplash.com/photo-1587749158407-58ef2b89ccf8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3aGl0ZSUyMG1hcmJsZSUyMHNsYWIlMjB0ZXh0dXJlfGVufDF8fHx8MTc2OTkwOTkyNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    description: "Elegante mármol blanco de Carrara con vetas grises suaves. Ideal para espacios de lujo y diseños clásicos.",
+    description: "Elegante marmol blanco de Carrara con vetas grises suaves. Ideal para espacios de lujo y diseños clásicos.",
     application: "Encimeras, Baños, Pisos",
     features: ["Resistente al agua", "Pulido de alta calidad", "Vetas naturales", "Elegancia atemporal", "Fácil mantenimiento"],
     dimensions: "3m x 1.5m",
@@ -42,7 +42,7 @@ export const products: Product[] = [
     type: "Cuarzo Engineered",
     price: 95,
     image: "https://images.unsplash.com/photo-1749704647283-3ad79f4acc6a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxxdWFydHolMjBjb3VudGVydG9wJTIwbW9kZXJufGVufDF8fHx8MTc2OTkwOTkyNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    description: "Cuarzo engineered con apariencia de mármol Calacatta. Resistente y de bajo mantenimiento.",
+    description: "Cuarzo engineered con apariencia de marmol Calacatta. Resistente y de bajo mantenimiento.",
     application: "Encimeras, Islas de Cocina",
     features: ["Resistente al agua", "Anti-manchas", "No requiere sellado", "Higiénico", "Garantía extendida"],
     dimensions: "3m x 1.4m",
@@ -50,8 +50,8 @@ export const products: Product[] = [
   },
   {
     id: 4,
-    name: "Mármol Travertino",
-    type: "Mármol Natural",
+    name: "Marmol Travertino",
+    type: "Marmol Natural",
     price: 85,
     image: "https://images.unsplash.com/photo-1693773511442-8f2787a2c89e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYXJibGUlMjB0aWxlJTIwZmxvb3Jpbmd8ZW58MXx8fHwxNzY5OTA5OTI1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     description: "Travertino con textura natural y tonos cálidos. Perfecto para pisos y revestimientos.",
@@ -74,11 +74,11 @@ export const products: Product[] = [
   },
   {
     id: 6,
-    name: "Mármol Emperador",
-    type: "Mármol Premium",
+    name: "Marmol Emperador",
+    type: "Marmol Premium",
     price: 130,
     image: "https://images.unsplash.com/photo-1765766600805-e75c44124d2c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYXJibGUlMjBiYXRocm9vbSUyMHZhbml0eXxlbnwxfHx8fDE3Njk5MDk5MjV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    description: "Mármol marrón oscuro con vetas blancas distintivas. Sofisticación y elegancia para baños de lujo.",
+    description: "Marmol marrón oscuro con vetas blancas distintivas. Sofisticación y elegancia para baños de lujo.",
     application: "Baños, Encimeras, Muros",
     features: ["Resistente al agua", "Vetas blancas únicas", "Tono cálido", "Elegancia", "Alta calidad"],
     dimensions: "2.5m x 1.5m",

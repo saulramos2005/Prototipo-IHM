@@ -11,7 +11,7 @@ import {
   CardTitle,
 } from "../components/ui/card";
 import { useAuth } from "../contexts/AuthContext";
-import { toast } from "sonner@2.0.3";
+import { toast } from "sonner";
 import { LogIn, User, Lock } from "lucide-react";
 
 export function LoginPage() {
@@ -104,7 +104,7 @@ export function LoginPage() {
                 <Input
                   id="password"
                   type="password"
-                  placeholder="••••••••"
+                  placeholder="Ingrese su contraseña"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required

@@ -1,10 +1,16 @@
 import { Star, Award, Users, Wrench } from "lucide-react";
 import {Home, Image, Package, FileText, WandSparkles, Sparkles, Info, Phone, Boxes, PackageOpen, Menu, X, UserCircle} from 'lucide-react'
-
+import { Rol } from "../contexts/AuthContext";
 export interface Stat {
   icon: React.ReactNode;
   value: string;
   label: string;
+}
+export interface Navigation {
+  href: string;
+  label: string;
+  icon: any;
+  rol?: Rol[];
 }
 
 export const stats: Stat[] = [
@@ -43,14 +49,14 @@ export const contactInfo = {
   quoteTime: "Cotizaciones en 24 horas",
 };
 
-export const navigation = [
-  { href: "/", label: "Inicio", icon: Home },
-  { href: "/catalogo", label: "Catálogo", icon: Image },
-  { href: "/inventario", label: "Inventario", icon: PackageOpen },
-  { href: "/clientes", label: "Clientes", icon: UserCircle },
-  { href: "/asistente", label: "Asistente IA", icon: WandSparkles},
-  { href: "/contacto", label: "Contacto", icon: Phone },
-  { href: "/nosotros", label: "Nosotros", icon: Info },
+export const navigation: Navigation[] = [
+  { href: "/", label: "Inicio", icon: Home, rol: ["cliente"]},
+  { href: "/catalogo", label: "Catálogo", icon: Image, rol: ["cliente"]},
+  { href: "/inventario", label: "Inventario", icon: PackageOpen, rol: ["vendedor"]},
+  { href: "/clientes", label: "Clientes", icon: UserCircle, rol: ["vendedor"]},
+  { href: "/asistente", label: "Asistente IA", icon: WandSparkles, rol: ["vendedor", "cliente"]},
+  { href: "/contacto", label: "Contacto", icon: Phone, rol: ["cliente"]},
+  { href: "/nosotros", label: "Nosotros", icon: Info, rol: ["cliente"]},
 ];
 
 export const additionalServices = [

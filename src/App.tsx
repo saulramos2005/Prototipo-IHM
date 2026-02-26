@@ -12,6 +12,7 @@ import { ContactPage } from "./pages/ContactPage";
 import { AsistenteIA } from "./pages/AsistenteIAPage";
 import { Inventario } from "./pages/InventarioPage";
 import { ClientesPage } from "./pages/ClientesPage";
+import { CotizacionesPage } from "./pages/CotizacionesPage";
 import { LoginPage } from "./pages/LoginPage";
 
 export default function App() {
@@ -42,6 +43,14 @@ export default function App() {
                 element={
                   <ProtectedRoute requireAdmin>
                     <ClientesPage/>
+                  </ProtectedRoute>
+                } 
+              />
+              <Route 
+                path="/cotizaciones" 
+                element={
+                  <ProtectedRoute requireAdmin>
+                    <CotizacionesPage/>
                   </ProtectedRoute>
                 } 
               />

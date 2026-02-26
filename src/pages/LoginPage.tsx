@@ -55,10 +55,11 @@ export function LoginPage() {
       <div className="w-full max-w-2xl">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-semibold text-primary mb-2">
-            New Top C.A.
+            ¿Eres vendedor?
           </h1>
           <p className="text-muted-foreground">
-            Iniciar Sesión
+            Inicia Sesión en tu cuenta
+            Aqui falta un fondo, una imagen, una vaina
           </p>
         </div>
 
@@ -66,11 +67,8 @@ export function LoginPage() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <LogIn className="h-5 w-5" />
-              Acceder al Sistema
+              Ingresa tus credenciales para acceder al sistema
             </CardTitle>
-            <CardDescription>
-              Ingrese sus credenciales para continuar
-            </CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-4">

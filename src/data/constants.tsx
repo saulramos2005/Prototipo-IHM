@@ -54,6 +54,7 @@ export const navigation: Navigation[] = [
   { href: "/catalogo", label: "Catálogo", icon: Image, rol: ["cliente"]},
   { href: "/inventario", label: "Inventario", icon: PackageOpen, rol: ["vendedor"]},
   { href: "/clientes", label: "Clientes", icon: UserCircle, rol: ["vendedor"]},
+  { href: "/cotizaciones", label: "Cotizaciones", icon: FileText, rol: ["vendedor"]},
   { href: "/asistente", label: "Asistente IA", icon: WandSparkles, rol: ["vendedor", "cliente"]},
   { href: "/contacto", label: "Contacto", icon: Phone, rol: ["cliente"]},
   { href: "/nosotros", label: "Nosotros", icon: Info, rol: ["cliente"]},

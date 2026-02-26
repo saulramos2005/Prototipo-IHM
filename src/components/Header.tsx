@@ -42,7 +42,8 @@ export function Header() {
 
   // Filter navigation based on admin status
   const visibleNavigation = navigation.filter((item) => {
-    return item.rol?.includes(user?.role!);
+    if (isAdmin) return item.rol?.includes(user?.role!);
+    return item.rol?.includes('cliente');
   });
 
   return (

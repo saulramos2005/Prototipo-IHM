@@ -585,7 +585,7 @@ export function CotizacionesPage() {
                 className="hover:shadow-md transition-shadow"
               >
                 <CardContent className="p-6">
-                  <div className="flex items-start justify-between">
+                  <div className="flex items-center justify-between">
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2">
                         <h3 className="font-semibold text-lg">
@@ -653,14 +653,7 @@ export function CotizacionesPage() {
                       >
                         <Edit className="h-4 w-4" />
                       </Button>
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick={() => handleExportPDF(quote)}
-                        title="Exportar PDF"
-                      >
-                        <Download className="h-4 w-4" />
-                      </Button>
+                      
                       <Button
                         variant="ghost"
                         size="sm"
